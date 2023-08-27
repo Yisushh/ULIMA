@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class Programa {
+    public static void main(String[] args) {
+        int N, src=10; //src toma el valor de 10 como condicion para un bucle externo
+        int r, sr;   //sr almacena la sumatoria de residuos
+        r=sr=10;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("numero?");
+        N=sc.nextInt();
+        while (sr>=10){  //sr>=10
+            sr=0;
+            while (N!=0){
+                r=N%10;
+                sr=sr+r;
+                N=N/10;
+            }
+            //System.out.println("valor de sr "+sr);
+            N=sr;
+        }
+        System.out.println(sr);
+    }
+}
